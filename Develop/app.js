@@ -33,6 +33,16 @@ const questionEmployee = [
     }
 ];
 
+function manager(){
+    console.log("Let's build our team");
+    inquirer.prompt(questionsEmployee).then (function(data){
+        const manager = new Manager(data.nameManager, data.managerId, data.emailManager, data.officeNumber);
+        teamMembers.push(manager);
+        emptyId.push(data.managerId);
+        team();
+    });
+};
+
 //building a team
 
 function team() {
@@ -109,7 +119,7 @@ function engineer(){
             emptyId.push(data.internId);
         });
     };
-    
+
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
