@@ -103,8 +103,13 @@ function engineer(){
                 name:"internSchool",
                 message:"What is the intern's school?"
             }
-        ]) 
-    }
+        ]). then (function(data){
+            const intern = new Intern(data.internName,data.internId,data.internEmail,data.interSchool);
+            teamMembers.push(intern);
+            emptyId.push(data.internId);
+        });
+    };
+    
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
