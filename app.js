@@ -10,7 +10,7 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
-const teamMember = [];
+const teamMembers = [];
 const emptyId = [];
 
 const questionEmployee = [
@@ -35,7 +35,7 @@ const questionEmployee = [
 
 function manager(){
     console.log("Let's build our team");
-    inquirer.prompt(questionsEmployee).then (function(data){
+    inquirer.prompt(questionEmployee).then (function(data){
         const manager = new Manager(data.nameManager, data.managerId, data.emailManager, data.officeNumber);
         teamMembers.push(manager);
         emptyId.push(data.managerId);
@@ -51,7 +51,7 @@ function team() {
             type:"list",
             name:"memberChoice",
             message:"Which type of member would you like to add?",
-            chices:[
+            choices:[
                 "Engineer",
                 "Intern",
                 "I don't want to add any more team members"
@@ -59,13 +59,15 @@ function team() {
 
         }
     ]).then(function(data){
-        if(data.memberChoice === "Enginner"){
+        if(data.memberChoice === "Engineer"){
             engineer();
         }else if (data.memberChoice === "Intern"){
             intern();
-        }else (outputTeam());
+        } else {outputTeam()};
     });
 };
+
+//building engineers profile
 
 function engineer(){
     inquirer.prompt([
@@ -94,6 +96,7 @@ function engineer(){
     });
 
 };
+//building interns profile
     function intern(){
         inquirer.prompt([
             {
@@ -117,8 +120,24 @@ function engineer(){
             const intern = new Intern(data.internName,data.internId,data.internEmail,data.interSchool);
             teamMembers.push(intern);
             emptyId.push(data.internId);
+            team();
         });
     };
+
+    //write function
+
+    function outputTeam(){
+    
+        if (!fs.existsSync(OUTPUT_DIR)) {
+            fs.mkdirSync(OUTPUT_DIR);
+          } 
+          fs.writeFile (outputPath, render(teamMembers) , err => err?console.log(err):console.log("sucess"));   
+    }
+
+    // const OUTPUT_DIR = path.resolve(__dirname, "output");
+    // const outputPath = path.join(OUTPUT_DIR, "team.html");
+
+    manager ();  
 
 
 // Write code to use inquirer to gather information about the development team members,
