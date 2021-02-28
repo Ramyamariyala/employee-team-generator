@@ -109,7 +109,7 @@ function engineer(){
                 message:"What is intern's ID?"
             },{
                 type:"input",
-                name:"interEmail",
+                name:"internEmail",
                 message:"What is the intern's email?"
             },{
                 type:"input",
@@ -117,7 +117,7 @@ function engineer(){
                 message:"What is the intern's school?"
             }
         ]). then (function(data){
-            const intern = new Intern(data.internName,data.internId,data.internEmail,data.interSchool);
+            const intern = new Intern(data.internName,data.internId,data.internEmail,data.internSchool);
             teamMembers.push(intern);
             emptyId.push(data.internId);
             team();
@@ -157,7 +157,7 @@ function engineer(){
 // information; write your code to ask different questions via inquirer depending on
 // employee type.
 
-// HINT: make sure to build out your classes first! Remember that your Manager, Engineer,
+// HINT: make sure to build out your classes first! Remember ,
 // and Intern classes should all extend from a class named Employee; see the directions
 // for further information. Be sure to test out each class and verify it generates an
 // object with the correct structure and methods. This structure will be crucial in order
