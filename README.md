@@ -21,6 +21,11 @@ A manager should also enter office number, an intern should input their school n
 
 The app runs as a Node CLI to gather information about each employee.
 
+# Deployed link # Github link
+![Deployedlink](https://ramyamariyala.github.io/employee-team-generator/)
+![Github](https://github.com/Ramyamariyala/employee-team-generator.git)
+
+
 # Screenshots
 ![Webpage](Assets\Capture 1.PNG)
 
