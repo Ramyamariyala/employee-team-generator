@@ -27,7 +27,8 @@ The app runs as a Node CLI to gather information about each employee.
 
 
 # Screenshots
-![Webpage](Assets\Capture1.PNG)
+
+![Webpage](Assets/Capture1.PNG)
 
 # GIF 
 ![GIF]
