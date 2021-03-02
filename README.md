@@ -34,12 +34,12 @@ The app runs as a Node CLI to gather information about each employee.
 ![GIF](Assets/gif.gif)
 
 # Tools
--Visual Studio Code https://code.visualstudio.com
--Dependencies: [jest]https://jestjs.io/ for running the provided tests,  
--[inquirer]https://www.npmjs.com/package/inquirer for collecting input from the user.
--npm install
--npm run test
--Chrome DevTools - Inspect.
+- Visual Studio Code https://code.visualstudio.com
+- Dependencies: [jest]https://jestjs.io/ for running the provided tests,  
+- [inquirer]https://www.npmjs.com/package/inquirer for collecting input from the user.
+- npm install
+- npm run test
+- Chrome DevTools - Inspect.
 
 ## Questions
 For questions, please contacte me:
