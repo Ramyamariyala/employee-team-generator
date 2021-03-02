@@ -31,11 +31,11 @@ The app runs as a Node CLI to gather information about each employee.
 ![Webpage](Assets/Capture1.PNG)
 
 # GIF 
-![GIF]
+![GIF](Assets/gif.gif)
 
-  ## Questions
-  For questions, please contacte me:
-  * [Ramya Mariyala] (https://github.com/Ramya Mariyala)
-  * Email: ramya.mariyala@gmail.com
+## Questions
+For questions, please contacte me:
+* [Ramya Mariyala] (https://github.com/Ramya Mariyala)
+* Email: ramya.mariyala@gmail.com
 
 
